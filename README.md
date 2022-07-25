@@ -2,8 +2,6 @@
 
 Crop video using motion tracking data from **Kdenlive** with camera *smoothing* movement.  
 
-[<img src="https://github.com/raspi/motion-tracking-video-crop/blob/main/_doc/cropped.png" alt="cropped image" width="200" />](https://raw.githubusercontent.com/raspi/motion-tracking-video-crop/main/_doc/cropped.mp4 "Cropped")
-
 ## Requirements
 
 * [Python](https://www.python.org/) 3.10+
@@ -13,6 +11,8 @@ Crop video using motion tracking data from **Kdenlive** with camera *smoothing* 
 * Being not afraid of terminal 
 
 ## Mini-HowTo:
+
+[<img src="https://github.com/raspi/motion-tracking-video-crop/blob/main/_doc/cropped.png" alt="cropped image" width="200" align="left" />](https://raw.githubusercontent.com/raspi/motion-tracking-video-crop/main/_doc/cropped.mp4 "Cropped video")
 
 First, create a folder for your project. Here we use `birb` folder because we're tracking a bird.
 Copy your source video to `birb` folder as `source.mp4`.   
@@ -25,7 +25,7 @@ It should be as simple as adding the video to the master track
 and then drag'n'drop *Motion Tracker* from the effects to the track and 
 then moving and resizing the rectangle on what you're tracking and finally clicking *Analyze*.
 
-![Kdenlive motion tracking](_doc/kdenlive_motion_tracking.png)
+<img src="https://github.com/raspi/motion-tracking-video-crop/blob/main/_doc/kdenlive_motion_tracking.png" alt="Kdenlive Motion Tracker" width="800" />
 
 When you have satisfying motion tracking data in **Kdenlive**, go to the next step.
 

@@ -84,4 +84,4 @@ You can get the framerate from the original video with `ffprobe` or using any vi
 
 Now you have `cropped.mp4` where the moving bird is tracked.
 
-Now you can add the original audio back to the clip (which is out of scope for this tutorial).
+Now you can add the original audio back to the clip with **Kdenlive** or **ffmpeg** (which is out of scope for this tutorial).

@@ -2,6 +2,8 @@
 
 Crop video using motion tracking data from **Kdenlive** with camera *smoothing* movement.  
 
+[![Cropped](https://github.com/raspi/motion-tracking-video-crop/blob/main/_doc/cropped.png)](https://raw.githubusercontent.com/raspi/motion-tracking-video-crop/main/_doc/cropped.mp4 "Cropped")
+
 ## Requirements
 
 * [Python](https://www.python.org/) 3.10+

@@ -78,5 +78,8 @@ Then we generate the video from the images:
 
     ffmpeg -framerate 29.97 -i "crop.source_%05d.png" cropped.mp4
 
+You can get the framerate from the original video with `ffprobe` or using any video viewer.
+
 Now you have `cropped.mp4` where the moving bird is tracked.
 
+Now you can add the original audio back to the clip (which is out of scope for this tutorial).

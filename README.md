@@ -99,7 +99,7 @@ It should look something like this:
 
 `[0].value` has `<keyframe number>~=X Y Width Height ?dunno?;next...` motion tracker keyframe data. 
 
-Now create `keyframes.json` in the `birb` folder with this clipboard data.
+Now create `keyframes.json` in the `birb` folder with your clipboard data.
 
 Close **Kdenlive**.
 

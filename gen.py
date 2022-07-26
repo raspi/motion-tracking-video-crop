@@ -8,21 +8,12 @@ from os.path import isfile
 from pathlib import Path
 from typing import List
 
-from lib import KeyFrame, Calculator, is_dir, FullPaths, __VERSION__, __AUTHOR__, __YEAR__, get_key_frames
+from lib import KeyFrame, Calculator, is_dir, FullPaths, __VERSION__, __AUTHOR__, __YEAR__, get_key_frames, str2bool
 
 __DESCRIPTION__ = "Generate CSV file from Kdenlive motion tracking data for cropping with smoothing"
 __EPILOG__ = "%(prog)s v{0} (c) {1} {2}-".format(__VERSION__, __AUTHOR__, __YEAR__)
 __EXAMPLES__ = [
 ]
-
-
-def str2bool(v):
-    if isinstance(v, bool):
-        return v
-    if v.lower() in ('yes', 'true', 't', 'y', '1'):
-        return True
-    else:
-        return False
 
 
 def ffprobe(path: Path) -> dict:
@@ -118,7 +109,7 @@ if __name__ == '__main__':
         dest='use_y',
         required=False,
         nargs='?',
-        help='Use Y coordinate for cropping?',
+        help='Use Y (vertical) coordinate for cropping? (default: off)',
     )
 
     parser.add_argument(
@@ -129,7 +120,7 @@ if __name__ == '__main__':
         dest='use_x',
         required=False,
         nargs='?',
-        help='Use X coordinate for cropping?',
+        help='Use X (horizontal) coordinate for cropping? (default: on)',
     )
 
     parser.add_argument(

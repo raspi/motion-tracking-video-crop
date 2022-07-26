@@ -3,7 +3,7 @@ import os
 from dataclasses import dataclass, replace
 from typing import List
 
-__VERSION__ = "1.0.0"
+__VERSION__ = "1.1.0"
 __AUTHOR__ = "Pekka Järvinen"
 __YEAR__ = 2022
 
@@ -19,6 +19,15 @@ def is_dir(dirname: str) -> str:
         raise argparse.ArgumentTypeError(msg)
     else:
         return dirname
+
+
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    else:
+        return False
 
 
 @dataclass

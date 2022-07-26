@@ -124,7 +124,7 @@ Next we actually crop the images:
 
 This loads the `crop.csv` generated earlier and produces `crop.source_<frame>.png` images.
 
-Then we generate the video from the images:
+Then we generate the new cropped video from the images:
 
     ffmpeg -framerate 29.97 -i "crop.source_%05d.png" cropped.mp4
 

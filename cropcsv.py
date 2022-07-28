@@ -106,6 +106,15 @@ if __name__ == '__main__':
     )
 
     parser.add_argument(
+        '--stop',
+        default=0,
+        type=int,
+        dest='stop',
+        required=False,
+        help='Stop at this frame, 0 = no limit',
+    )
+
+    parser.add_argument(
         action=FullPaths,
         type=is_dir,
         dest='dir',
@@ -123,6 +132,10 @@ if __name__ == '__main__':
             if idx == 0:
                 # First line has headers, skip
                 continue
+
+            if args.stop != 0 and idx == args.stop:
+                # Stop at given frame
+                break
 
             startX, startY, endX, endY, width, height, owidth, oheight, fname = fmt(i)
 

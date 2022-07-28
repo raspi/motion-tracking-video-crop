@@ -151,6 +151,15 @@ if __name__ == '__main__':
     )
 
     parser.add_argument(
+        '--stop',
+        default=0,
+        type=int,
+        dest='stop',
+        required=False,
+        help='Stop at this frame, 0 = no limit',
+    )
+
+    parser.add_argument(
         action=FullPaths,
         type=is_dir,
         dest='dir',
@@ -226,6 +235,10 @@ if __name__ == '__main__':
             fname = 'source_{:05d}.png'.format(fidx + 1)
             if not isfile(os.path.join(args.dir, fname)):
                 continue
+
+            if fidx != 0 and fidx == args.stop:
+                # Stop at given frame
+                break
 
             startX = 0
             endX = width

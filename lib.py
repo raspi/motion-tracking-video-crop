@@ -3,7 +3,7 @@ import os
 from dataclasses import dataclass, replace
 from typing import List
 
-__VERSION__ = "1.2.0"
+__VERSION__ = "1.2.1"
 __AUTHOR__ = "Pekka Järvinen"
 __YEAR__ = 2022
 

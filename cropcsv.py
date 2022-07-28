@@ -140,9 +140,13 @@ if __name__ == '__main__':
                 args.debug
             ))
 
-    print("Processing...")
+    cpus: int = cpu_count() - 1
+    if cpus < 1:
+        cpus = 1
+
+    print(f"Processing with {cpus} CPUs...")
     now = datetime.now()
-    with Pool(processes=cpu_count()) as pool:
+    with Pool(processes=cpus) as pool:
         results = pool.map(convert_multi, lines)
     print("Took", str(datetime.now() - now))
     print("Done.")

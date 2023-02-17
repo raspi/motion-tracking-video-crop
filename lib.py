@@ -54,9 +54,19 @@ def get_key_frames(data: str, tuneX: int = 0, tuneY: int = 0) -> (List[KeyFrame]
     ysize: int = 0
 
     for i in data.split(";"):
-        key, tdata = i.split("~=")
+        if '~=' in i:
+            key, tdata = i.split("~=")
+        else:
+            key, tdata = i.split("=")
 
-        x, y, xs, ys, _ = map(int, tdata.split(" "))
+        _tmp:List[int] = list(map(int, tdata.split(" ")))
+
+        x = _tmp[0]
+        y = _tmp[1]
+        xs = _tmp[2]
+        ys = _tmp[3]
+        
+        del _tmp
 
         if xsize == 0:
             xsize = xs + abs(tuneX)
